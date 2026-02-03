@@ -1,20 +1,10 @@
 public class Bai2 {
-    public static void main(String[] args) {
-        String moTa = "Sách Toán lớp 10. Kệ: A12, tầng 2.";
-
-        if (moTa.contains("Kệ:")) {
-            // Tìm vị trí bắt đầu ngay sau chữ "Kệ: "
-            int start = moTa.indexOf("Kệ:") + 4;
-            // Tìm dấu phẩy gần nhất sau đó
-            int end = moTa.indexOf(",", start);
-
-            String maViTri = moTa.substring(start, end);
-
-            // Thay thế chữ
-            String moTaMoi = moTa.replace("Kệ:", "Vị trí lưu trữ:");
-
-            System.out.println("Mã vị trí trích xuất: " + maViTri.trim());
-            System.out.println("Mô tả sau khi thay thế: " + moTaMoi);
-        }
+    public static void main(String[] args){
+        Account account1 = new Account("nguyenvana", "nva12345", "nva@gmail.com");
+        Account account2 = new Account("tranthib", "ttb67890", "ttb@gmail.com");
+        System.out.println("Thông tin trước khi đổi mật khẩu: ");
+        account1.showAccountInfor();
+        account2.showAccountInfor();
+        account1.setPassword("nvanh123");
     }
 }
